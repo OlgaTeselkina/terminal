@@ -1,0 +1,41 @@
+
+    Посмотреть, где я - pwd
+    Создать папку - mkdir 34QA
+    Зайти в папку - cd 34QA
+    Создать 3 папки - mkdir folder{1..3}
+    Зайти в любую папку - cd folder1
+    Создать 5 файлов (3 txt, 2 json) - touch file{1..3}.txt; touch file{1..2}.json
+    Создать 3 папки - mkdir newfolder{1..3}
+    Вывести список содержимого папки - ls -l
+    Открыть любой txt файл - vim file3.txt
+    Написать туда что-нибудь, любой текст - i -> ввести текст
+    Сохранить и выйти - :wq!
+    Выйти из папки на уровень выше - cd ..
+    Переместить любые 2 файла, которые вы создали, в любую другую папку - mv file1.json file2.txt /home/sizy/OlgaWork/
+    Cкопировать любые 2 файла, которые вы создали, в любую другую папку - cp file1.txt file3.txt /home/sizy/OlgaWork/
+    Найти файл по имени - find /home/sizy/34QA/folder1/ -name "file2.json"
+    Просмотреть содержимое в реальном времени - tail -f file3.txt
+    Вывести несколько первых строк из текстового файла - head -5 file3.txt
+    Вывести несколько последних строк из текстового файла - tail -5 file3.txt
+    Просмотреть содержимое длинного файла - less file3.txt
+    Вывести дату и время - date
+
+Отправить http запрос на сервер
+
+    curl -l http://162.55.220.72:5005
+
+Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+    #!/bin/bash
+    mkdir 34QA
+    echo 34QA
+    cd 34QA
+    mkdir folder{1..3}
+    echo folder{1..3}
+    cd folder1
+    touch file{1..3}.txt; touch file{1..2}.json
+    mkdir newfolder{1..3}
+    echo newfolder{1..3}
+    ls -l
+    mv file1.json file2.txt /home/sizy/OlgaWork/
+
